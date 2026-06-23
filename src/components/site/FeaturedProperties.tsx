@@ -2,7 +2,7 @@ import { Bath, BedDouble, MapPin, Square } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { mockProperties } from "@/data/mockProperties";
+import { useProperties } from "@/hooks/use-properties";
 import { formatINR, type PropertyStatus } from "@/types/property";
 
 const statusVariant: Record<PropertyStatus, string> = {
@@ -12,7 +12,8 @@ const statusVariant: Record<PropertyStatus, string> = {
 };
 
 export function FeaturedProperties() {
-  const featured = mockProperties.slice(0, 6);
+  const { properties } = useProperties();
+  const featured = properties.slice(0, 6);
   return (
     <section id="properties" className="bg-muted/40 py-24">
       <div className="container">

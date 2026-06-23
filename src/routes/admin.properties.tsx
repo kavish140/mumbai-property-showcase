@@ -40,22 +40,30 @@ function PropertiesPage() {
   function openAdd() { setEditing(null); setDialogOpen(true); }
   function openEdit(p: Property) { setEditing(p); setDialogOpen(true); }
 
-  function handleSave(data: Omit<Property, "id">) {
-    if (editing) {
-      updateProperty(editing.id, data);
-      toast.success("Property updated");
-    } else {
-      addProperty(data);
-      toast.success("Property added");
+  async function handleSave(data: Omit<Property, "id">) {
+    try {
+      if (editing) {
+        await updateProperty(editing.id, data);
+        toast.success("Property updated");
+      } else {
+        await addProperty(data);
+        toast.success("Property added");
+      }
+      setDialogOpen(false);
+      setEditing(null);
+    } catch (err) {
+      toast.error("Failed to save property");
     }
-    setDialogOpen(false);
-    setEditing(null);
   }
 
-  function confirmDelete() {
+  async function confirmDelete() {
     if (!deletingId) return;
-    deleteProperty(deletingId);
-    toast.success("Property deleted");
+    try {
+      await deleteProperty(deletingId);
+      toast.success("Property deleted");
+    } catch (err) {
+      toast.error("Failed to delete property");
+    }
     setDeletingId(null);
   }
 
