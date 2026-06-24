@@ -1,16 +1,17 @@
 const xlsx = require('xlsx');
 const path = require('path');
+const fs = require('fs');
 const { randomUUID } = require('crypto');
 
-const wb = xlsx.readFile(path.join(process.cwd(), 'src', 'real estate.xlsx'));
+const wb = xlsx.readFile(path.join(process.cwd(), 'data', 'real-estate-listings.xlsx'));
 const ws = wb.Sheets[wb.SheetNames[0]];
 const raw = xlsx.utils.sheet_to_json(ws, { defval: '' });
-
-// Filter to only rows with actual data
 const rows = raw.filter(r => r['Property Description'] && r['Property Type']);
-console.log(`Found ${rows.length} properties`);
 
-// Location -> area image mapping (Unsplash curated Mumbai/India property images)
+// Load sold property numbers detected via strikethrough analysis
+const soldNums = new Set(JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data', 'sold-property-numbers.json'), 'utf-8')));
+console.log('Sold property #s:', [...soldNums].join(', '));
+
 const locationImages = {
   Mulund: [
     'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80',
@@ -32,9 +33,13 @@ const locationImages = {
     'https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=80',
     'https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=800&q=80',
   ],
-  Koparkhairne: [
+  Bhandup: [
     'https://images.unsplash.com/photo-1561753757-d8880c5a3551?w=800&q=80',
     'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800&q=80',
+  ],
+  Koparkhairne: [
+    'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800&q=80',
+    'https://images.unsplash.com/photo-1561753757-d8880c5a3551?w=800&q=80',
   ],
 };
 
@@ -45,7 +50,6 @@ const commercialImages = [
   'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80',
   'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80',
 ];
-
 const landImages = [
   'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80',
   'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&q=80',
@@ -57,7 +61,7 @@ function getImage(type, location) {
   const key = `${type}-${location}`;
   counters[key] = (counters[key] || 0);
   let pool;
-  if (type === 'Commercial') pool = commercialImages;
+  if (type === 'Commercial' || type === 'Industrial') pool = commercialImages;
   else if (type === 'Land') pool = landImages;
   else pool = locationImages[location] || locationImages.Mulund;
   const img = pool[counters[key] % pool.length];
@@ -71,36 +75,28 @@ function mapType(raw) {
   return 'Commercial';
 }
 
-function mapStatus(saleOrLease) {
-  // All from the excel are current listings — mark as Available
-  return 'Available';
-}
-
-// Generate bedrooms from description
 function parseBedrooms(desc) {
   const m = desc.match(/(\d+(?:\.\d+)?)\s*BHK/i);
   if (m) return Math.floor(parseFloat(m[1]));
   if (/studio|1rk/i.test(desc)) return 1;
-  return 0; // Commercial / land
+  return 0;
 }
 
-// We don't have price data — use 0 as placeholder (admin can update)
 function estimatePrice(type, location, bedrooms) {
-  // Rough Mumbai/Thane market estimates
   if (type === 'Land') return 50000000;
-  if (type === 'Commercial') {
+  if (type === 'Commercial' || type === 'Industrial') {
     if (location === 'Mulund') return 8000000;
     return 5000000;
   }
-  // Residential
-  const base = location === 'Mulund' ? 15000000 : 10000000;
-  return base + (bedrooms - 1) * 3000000;
+  const base = (location === 'Mulund' || location === 'Bhandup') ? 15000000 : 10000000;
+  return base + Math.max(0, bedrooms - 1) * 3000000;
 }
 
-const escape = s => s.replace(/'/g, "''");
+const escape = s => String(s).replace(/'/g, "''");
 
-const inserts = rows.map((r, i) => {
+const inserts = rows.map(r => {
   const id = randomUUID();
+  const propNum = r['#'];
   const type = mapType(r['Property Type']);
   const desc = r['Property Description'].trim();
   const location = r['Location'].trim();
@@ -111,42 +107,42 @@ const inserts = rows.map((r, i) => {
   const area = type === 'Land' ? 10000 : bedrooms > 0 ? 850 + bedrooms * 200 : 1200;
   const price = estimatePrice(type, location, bedrooms);
   const image = getImage(type, location);
-  const status = mapStatus(saleOrLease);
-  const fullDesc = `${subType ? subType + ' — ' : ''}${saleOrLease === 'Sale/Rent' ? 'Available for Sale or Rent' : saleOrLease === 'Rent' ? 'Available for Rent' : 'Available for Sale'}. Located in ${location}, Maharashtra. Contact Mumbai Realty for pricing and site visits.`;
+
+  // KEY: use 'Sold' for strikethrough rows
+  const status = soldNums.has(propNum) ? 'Sold' : 'Available';
+
+  const saleDesc = saleOrLease === 'Sale/Rent' ? 'Available for Sale or Rent'
+    : saleOrLease === 'Rent' ? 'Available for Rent'
+    : 'Available for Sale';
+  const fullDesc = `${subType ? subType + ' — ' : ''}${status === 'Sold' ? 'SOLD. ' : ''}${saleDesc}. Located in ${location}, Maharashtra. Contact Mumbai Realty for details.`;
 
   return `('${id}', '${escape(desc)}', '${escape(location)}, Maharashtra', ${price}, '${type}', '${status}', ${bedrooms}, ${bathrooms}, ${area}, '${escape(fullDesc)}', '${image}')`;
 });
 
 const sql = `-- ============================================================
--- Mumbai Realty — Real Property Data from Excel (178 listings)
+-- Mumbai Realty — Real Property Data (178 listings)
+-- Strikethrough rows correctly marked as 'Sold'
+-- Sold properties: #3, #25, #64, #88, #133, #165
 -- Run this in Supabase SQL Editor
 -- ============================================================
 
--- Step 1: Remove all existing dummy/test properties
+-- Step 1: Remove all existing properties
 DELETE FROM properties;
 
--- Step 2: Reset sequence if any (Supabase uses UUIDs so no sequence needed)
-
--- Step 3: Insert all 178 real properties
--- NOTE: Prices are estimates — update via Admin panel with actual figures
--- NOTE: Images are curated Unsplash photos — replace with real photos via Admin
+-- Step 2: Insert all 178 properties with correct status
+-- NOTE: Prices are estimates — update actual figures via Admin panel
+-- NOTE: Images are placeholder Unsplash photos — replace via Admin
 
 INSERT INTO properties (id, title, location, price, type, status, bedrooms, bathrooms, "areaSqft", description, "imageUrl")
 VALUES
 ${inserts.join(',\n')};
 
--- Verify
-SELECT COUNT(*) AS total_properties FROM properties;
+-- Verify counts
+SELECT status, COUNT(*) FROM properties GROUP BY status;
+SELECT COUNT(*) AS total FROM properties;
 `;
 
-const fs = require('fs');
 fs.writeFileSync(path.join(process.cwd(), 'data', 'seed-properties.sql'), sql);
-console.log('✓ Generated data/seed-properties.sql with', rows.length, 'properties');
-
-// Also output unique locations and types for reference
-const locations = [...new Set(rows.map(r => r['Location'].trim()))];
-const types = [...new Set(rows.map(r => r['Property Type'].trim()))];
-const subTypes = [...new Set(rows.map(r => r['Sub-Type'].trim()))];
-console.log('Locations:', locations.join(', '));
-console.log('Types:', types.join(', '));
-console.log('Sub-types:', subTypes.join(', '));
+console.log(`✓ Generated seed-properties.sql with ${rows.length} properties`);
+console.log(`  - Available: ${rows.length - soldNums.size}`);
+console.log(`  - Sold: ${soldNums.size}`);
