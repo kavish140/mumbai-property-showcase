@@ -19,6 +19,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import type { Property, PropertyStatus, PropertyType } from "@/types/property";
+import { ImageUploadZone } from "@/components/admin/ImageUploadZone";
 
 interface Props {
   open: boolean;
@@ -54,8 +55,12 @@ export function PropertyDialog({ open, onOpenChange, editing, onSave }: Props) {
 
   function submit(e: FormEvent) {
     e.preventDefault();
-    if (!form.title.trim() || !form.location.trim() || !form.imageUrl.trim()) {
-      toast.error("Title, location, and image URL are required.");
+    if (!form.title.trim() || !form.location.trim()) {
+      toast.error("Title and location are required.");
+      return;
+    }
+    if (!form.imageUrl.trim()) {
+      toast.error("Please upload or provide an image URL.");
       return;
     }
     if (form.price <= 0 || form.areaSqft <= 0) {
@@ -167,11 +172,10 @@ export function PropertyDialog({ open, onOpenChange, editing, onSave }: Props) {
             />
           </div>
           <div className="sm:col-span-2">
-            <Label>Image URL</Label>
-            <Input
+            <Label>Property Photo</Label>
+            <ImageUploadZone
               value={form.imageUrl}
-              onChange={(e) => update("imageUrl", e.target.value)}
-              placeholder="https://images.unsplash.com/…"
+              onChange={(url) => update("imageUrl", url)}
             />
           </div>
           <div className="sm:col-span-2">

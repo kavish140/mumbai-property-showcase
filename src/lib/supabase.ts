@@ -31,3 +31,21 @@ export async function getProperty(id: string): Promise<Property | null> {
 
   return data as Property;
 }
+
+/**
+ * Uploads an image file to Supabase Storage and returns the public URL.
+ * Generates a unique filename to avoid collisions.
+ */
+export async function uploadPropertyImage(file: File): Promise<string> {
+  const ext = file.name.split(".").pop() || "jpg";
+  const filename = `${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
+
+  const { error } = await supabase.storage
+    .from("property-images")
+    .upload(filename, file, { upsert: false, contentType: file.type });
+
+  if (error) throw new Error(error.message);
+
+  const { data } = supabase.storage.from("property-images").getPublicUrl(filename);
+  return data.publicUrl;
+}
