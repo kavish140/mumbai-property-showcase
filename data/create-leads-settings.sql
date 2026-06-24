@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS settings (
   key    text PRIMARY KEY,
   value  text NOT NULL,
   label  text,
-  group  text  -- e.g. 'contact', 'social', 'company'
+  "group"  text  -- e.g. 'contact', 'social', 'company'
 );
 
 -- Allow only authenticated to read/write settings
