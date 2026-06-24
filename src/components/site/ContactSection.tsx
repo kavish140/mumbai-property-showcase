@@ -4,28 +4,51 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useLeads } from "@/hooks/use-leads";
+import { useSettings } from "@/hooks/use-settings";
 
 export function ContactSection() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [busy, setBusy] = useState(false);
+  const { addLead } = useLeads();
+  const { getSetting } = useSettings();
+  
   const set =
     (k: keyof typeof form) =>
     (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
       setForm({ ...form, [k]: e.target.value });
 
-  function onSubmit(e: FormEvent) {
+  async function onSubmit(e: FormEvent) {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) {
       toast.error("Please fill in name, email, and a short message.");
       return;
     }
     setBusy(true);
-    setTimeout(() => {
+    try {
+      await addLead({
+        name: form.name,
+        email: form.email,
+        phone: form.phone || null,
+        message: form.message,
+        interest: null,
+      });
       toast.success("Thanks! We'll get back to you within 24 hours.");
       setForm({ name: "", email: "", phone: "", message: "" });
+    } catch (error) {
+      console.error(error);
+      toast.error("Failed to send message. Please try again.");
+    } finally {
       setBusy(false);
-    }, 800);
+    }
   }
+
+  const phone = getSetting("phone", "+91 97571 90200");
+  const email = getSetting("email", "ganatraj@gmail.com");
+  const whatsapp = getSetting("whatsapp", "919757190200");
+  const addr1 = getSetting("address_line1", "G-54, Saidham Shopping Plaza");
+  const addr2 = getSetting("address_line2", "P.K. Road, Mulund West, Mumbai");
+  const hours = getSetting("business_hours", "Mon–Sat, 10am–7pm IST");
 
   return (
     <section id="contact" className="relative overflow-hidden bg-muted/40 py-28">
@@ -132,14 +155,14 @@ export function ContactSection() {
               <h3 className="font-display text-2xl font-bold">Chat on WhatsApp</h3>
               <p className="mt-2.5 text-sm leading-relaxed text-primary-foreground/70">
                 Fastest way to reach us. We reply within minutes during business
-                hours (Mon–Sat, 10am–7pm).
+                hours.
               </p>
               <Button
                 asChild
                 size="lg"
                 className="mt-6 rounded-xl bg-[#25D366] font-semibold text-white hover:bg-[#1aad52]"
               >
-                <a href="https://wa.me/919757190200" target="_blank" rel="noreferrer">
+                <a href={`https://wa.me/${whatsapp}`} target="_blank" rel="noreferrer">
                   <MessageCircle className="mr-2 h-5 w-5" />
                   Open WhatsApp
                 </a>
@@ -151,7 +174,7 @@ export function ContactSection() {
               <h3 className="font-display text-lg font-bold">Direct Contact</h3>
               <div className="mt-5 space-y-4">
                 <a
-                  href="tel:+919757190200"
+                  href={`tel:${phone.replace(/[^+\d]/g, "")}`}
                   className="flex items-center gap-4 rounded-xl border border-border p-4 transition-colors hover:border-accent/30 hover:bg-muted/50"
                 >
                   <div className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-gradient-navy text-primary-foreground">
@@ -159,11 +182,11 @@ export function ContactSection() {
                   </div>
                   <div>
                     <div className="text-xs text-muted-foreground">Phone</div>
-                    <div className="font-semibold text-foreground">+91 97571 90200</div>
+                    <div className="font-semibold text-foreground">{phone}</div>
                   </div>
                 </a>
                 <a
-                  href="mailto:ganatraj@gmail.com"
+                  href={`mailto:${email}`}
                   className="flex items-center gap-4 rounded-xl border border-border p-4 transition-colors hover:border-accent/30 hover:bg-muted/50"
                 >
                   <div className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-gradient-gold text-accent-foreground">
@@ -171,7 +194,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <div className="text-xs text-muted-foreground">Email</div>
-                    <div className="font-semibold text-foreground">ganatraj@gmail.com</div>
+                    <div className="font-semibold text-foreground">{email}</div>
                   </div>
                 </a>
                 <div className="flex items-start gap-4 rounded-xl border border-border p-4">
@@ -181,13 +204,13 @@ export function ContactSection() {
                   <div>
                     <div className="text-xs text-muted-foreground">Office</div>
                     <div className="text-sm font-medium text-foreground leading-relaxed">
-                      G-54, Saidham Shopping Plaza,<br />P.K. Road, Mulund West, Mumbai
+                      {addr1},<br />{addr2}
                     </div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 pt-1 text-xs text-muted-foreground">
                   <Clock className="h-3.5 w-3.5" />
-                  Mon–Sat, 10am–7pm IST
+                  {hours}
                 </div>
               </div>
             </div>
@@ -199,9 +222,12 @@ export function ContactSection() {
 }
 
 export function WhatsappFab() {
+  const { getSetting } = useSettings();
+  const whatsapp = getSetting("whatsapp", "919757190200");
+  
   return (
     <a
-      href="https://wa.me/919757190200"
+      href={`https://wa.me/${whatsapp}`}
       target="_blank"
       rel="noreferrer"
       aria-label="Chat on WhatsApp"
