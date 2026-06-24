@@ -1,0 +1,786 @@
+[
+  {
+    "old": "13 2BHK in Runwal Pride (Lakshada Swapnil)",
+    "new": "13 2BHK in Runwal Pride"
+  },
+  {
+    "old": "25 Commercial Space on Lease at Jamnadas Industrial Estate, Mulund (Anish Gupta)",
+    "new": "25 Commercial Space on Lease at Jamnadas Industrial Estate, Mulund"
+  },
+  {
+    "old": "26 2BHK Unfurnished Flat for Sale on Devidayal Road, Mulund (Milind Thakkar)",
+    "new": "26 2BHK Unfurnished Flat for Sale on Devidayal Road, Mulund"
+  },
+  {
+    "old": "22 Commercial Office for Sale or Rent in Kalyan (Abhay Lele)",
+    "new": "22 Commercial Office for Sale or Rent in Kalyan"
+  },
+  {
+    "old": "21 Industrial Building on Lease at Ambernath (Pramod Kumar)",
+    "new": "21 Industrial Building on Lease at Ambernath"
+  },
+  {
+    "old": "20 Warehouse on Lease at Dombivali (Kamlesh Chavda)",
+    "new": "20 Warehouse on Lease at Dombivali"
+  },
+  {
+    "old": "19 Shop on Lease -P D Mello Road_Masji East (Anish Gupta)",
+    "new": "19 Shop on Lease -P D Mello Road"
+  },
+  {
+    "old": "18 Commercial Space on Rent_Panchpakhadi, Thane (Raunak K)",
+    "new": "18 Commercial Space on Rent"
+  },
+  {
+    "old": "17 Commercial Property in Nahur (Neeraj Manickam)",
+    "new": "17 Commercial Property in Nahur"
+  },
+  {
+    "old": "15 Shop on Rent in Wagle Estate Thane (Ashutosh Joglekar & Jeetendra Ferreira)_Centrum Business Square_Road 16",
+    "new": "15 Shop on Rent in Wagle Estate Thane"
+  },
+  {
+    "old": "24 Commercial Building on Lease in Wagle Estate (Hitesh Israni)",
+    "new": "24 Commercial Building on Lease in Wagle Estate"
+  },
+  {
+    "old": "23 2BHK at Mira Road for Sale (Ashit Badani)",
+    "new": "23 2BHK at Mira Road for Sale"
+  },
+  {
+    "old": "28 2.5 BHK for Sale in Panvel Marathon Nexzone, Near Airport (Vipul Unadkat)",
+    "new": "28 2.5 BHK for Sale in Panvel Marathon Nexzone, Near Airport"
+  },
+  {
+    "old": "27 3BHK Bungalow in Lonavala for Sale (Girishbhai Desai)",
+    "new": "27 3BHK Bungalow in Lonavala for Sale"
+  },
+  {
+    "old": "30 Commercial Space for Rent in Mulund West (Rajubhai Meghani)",
+    "new": "30 Commercial Space for Rent in Mulund West"
+  },
+  {
+    "old": "29 4BHK Bungalow for sale in Panchpakhadi Thane West (Anil Aradhye)",
+    "new": "29 4BHK Bungalow for sale in Panchpakhadi Thane West"
+  },
+  {
+    "old": "45 5BHK Bungalow in Neelkanth Woods, Manpada Thane (Yashasvi Dayal)",
+    "new": "45 5BHK Bungalow in Neelkanth Woods, Manpada Thane"
+  },
+  {
+    "old": "44 Hospital in Mulund for Sale or Rent (Broker Dinesh Sakat)",
+    "new": "44 Hospital in Mulund for Sale or Rent"
+  },
+  {
+    "old": "43 Flat for Sale in Khopoli 1BHK (Vinod Kalani FHS)",
+    "new": "43 Flat for Sale in Khopoli 1BHK"
+  },
+  {
+    "old": "42 NA Land for Sale in Khopoli (Amin Merchant)",
+    "new": "42 NA Land for Sale in Khopoli"
+  },
+  {
+    "old": "41 Commercial property in Majiwada Thane on Lease (Debrati Goma Engineering)",
+    "new": "41 Commercial property in Majiwada Thane on Lease"
+  },
+  {
+    "old": "40 Bungalow on Sale on Ghodbunder Road, Thane (Girish Patki -Mukund)",
+    "new": "40 Bungalow on Sale on Ghodbunder Road, Thane"
+  },
+  {
+    "old": "39 Bungalow on Sale in Kolad (Jagruti RiverEdge Villa)",
+    "new": "39 Bungalow on Sale in Kolad"
+  },
+  {
+    "old": "38 Shop for Rent in Wagle Estate Thane (Niraj Bathija)",
+    "new": "38 Shop for Rent in Wagle Estate Thane"
+  },
+  {
+    "old": "37 Bungalow for Sale in Matheran (Nilofer Matheran)",
+    "new": "37 Bungalow for Sale in Matheran"
+  },
+  {
+    "old": "36 Commercial Property in Kolshet Thane for Sale (Sujata Joseph)",
+    "new": "36 Commercial Property in Kolshet Thane for Sale"
+  },
+  {
+    "old": "35 3BHK Brand New for Sale near Kalidas, Mulund West (Amar Patil Saraswati Heights)",
+    "new": "35 3BHK Brand New for Sale near Kalidas, Mulund West"
+  },
+  {
+    "old": "34 Industrial Gala on Sale KK Gupta Industrial Estate (Kaushik Shah Bhiwandi Broer)",
+    "new": "34 Industrial Gala on Sale KK Gupta Industrial Estate"
+  },
+  {
+    "old": "33 Nahur Hospital for Sale (Sanjay Singh)",
+    "new": "33 Nahur Hospital for Sale"
+  },
+  {
+    "old": "32 Shop for Sale or Rent at Kopri Thane (Ranjit Nagpal) (Praveen Nagpal Biraj Realty)",
+    "new": "32 Shop for Sale or Rent at Kopri Thane"
+  },
+  {
+    "old": "31 3BHK Furnished Flat for Sale near Saint Pius Church, Mulund West (Sumit Jain BNI)",
+    "new": "31 3BHK Furnished Flat for Sale near Saint Pius Church, Mulund West"
+  },
+  {
+    "old": "49 Office for Sale at Naupada Thane (Sujata Pradip Menon)",
+    "new": "49 Office for Sale at Naupada Thane"
+  },
+  {
+    "old": "47 4BHK Bungalow for Sale at Cosmos Hawain, Thane (Bhavesh Manjrekar)",
+    "new": "47 4BHK Bungalow for Sale at Cosmos Hawain, Thane"
+  },
+  {
+    "old": "48 Hotel in Dapoli (Manoj Gosavi)",
+    "new": "48 Hotel in Dapoli"
+  },
+  {
+    "old": "46 3BHK Bungalow for Sale Near Dmart, GB Road, Thane (Bhavesh Manjrekar)",
+    "new": "46 3BHK Bungalow for Sale Near Dmart, GB Road, Thane"
+  },
+  {
+    "old": "50 2BHK for Sale at Piramal Vraj at Balkum Thane (Viren Pateliya Broker)",
+    "new": "50 2BHK for Sale at Piramal Vraj at Balkum Thane"
+  },
+  {
+    "old": "51 Fully Furnished Office on Rent in Wagle Estate Thane (Agrawal Wagle Estate Office Lease)",
+    "new": "51 Fully Furnished Office on Rent in Wagle Estate Thane"
+  },
+  {
+    "old": "52 Fully Furnished Office on Rent in Bhandup (Pramod Chawla)",
+    "new": "52 Fully Furnished Office on Rent in Bhandup"
+  },
+  {
+    "old": "53 3BHK for Sale in LIC Colony Mulund West (Vimal Jain BNI)",
+    "new": "53 3BHK for Sale in LIC Colony Mulund West"
+  },
+  {
+    "old": "54 Office on Lease in Maker Tower Cuffe Parade, Mumbai (Aditya Chothani)",
+    "new": "54 Office on Lease in Maker Tower Cuffe Parade, Mumbai"
+  },
+  {
+    "old": "55 5 Acres Land for Sale in Mahabaleshwar (Pravin Shimpi)",
+    "new": "55 5 Acres Land for Sale in Mahabaleshwar"
+  },
+  {
+    "old": "56 Sea Beach Plot for Sale near Daman(Vishal Patel Umbergaon)",
+    "new": "56 Sea Beach Plot for Sale near Daman"
+  },
+  {
+    "old": "57 Hotel Building at Juhu Mumbai on Sale (Hiren Mehta Broker +1)",
+    "new": "57 Hotel Building at Juhu Mumbai on Sale"
+  },
+  {
+    "old": "59 Commercial - Industrial Premises on Lease at Andheri East (Palak Shah & Pankaj Shah Andheri)",
+    "new": "59 Commercial - Industrial Premises on Lease at Andheri East"
+  },
+  {
+    "old": "58 Industrial -Warehousing Land for Sale on Wada Shahpur Highway (John Edavazhickal -Chembur)",
+    "new": "58 Industrial -Warehousing Land for Sale on Wada Shahpur Highway"
+  },
+  {
+    "old": "60 Commercial Premises for Rent near Thane East Railway Station (Vijay Yashod)",
+    "new": "60 Commercial Premises for Rent near Thane East Railway Station"
+  },
+  {
+    "old": "61 3BHK for Sale in Ashford Royale, Mulund, Mumbai (Yashasvi Dayal)",
+    "new": "61 3BHK for Sale in Ashford Royale, Mulund, Mumbai"
+  },
+  {
+    "old": "62 3HK for Sale in Asha Nagar (Hiren Mehta +1 Broker)",
+    "new": "62 3HK for Sale in Asha Nagar"
+  },
+  {
+    "old": "63 Commercial Space on Lease in Mulund West (Rajubhai Meghani)",
+    "new": "63 Commercial Space on Lease in Mulund West"
+  },
+  {
+    "old": "64 3.5 BHK Flat for Sale or Lease at Panch Rasta, Mulund West, Mumbai (Rajesh Kumar)",
+    "new": "64 3.5 BHK Flat for Sale or Lease at Panch Rasta, Mulund West, Mumbai"
+  },
+  {
+    "old": "66 3BHK Flat for Sale in Asha Nagar Mulund West, Mumbai (Hiren Mehta +1 Broker)",
+    "new": "66 3BHK Flat for Sale in Asha Nagar Mulund West, Mumbai"
+  },
+  {
+    "old": "65 Premium Commercial Space on Sale Opposite Thane West Railway Station (Somveer Sharma)",
+    "new": "65 Premium Commercial Space on Sale Opposite Thane West Railway Station"
+  },
+  {
+    "old": "68 Bugalow for Sale in Alibag (Rajubhai Broker Hareshbhai)",
+    "new": "68 Bugalow for Sale in Alibag"
+  },
+  {
+    "old": "67 2BHK Flat for Sale in Shimpoli Borivali (Nilesh Gohil Sales Manager Vraj Project)",
+    "new": "67 2BHK Flat for Sale in Shimpoli Borivali"
+  },
+  {
+    "old": "70 4BHK Bungalow for Sale at Cosmos Hawain, Thane (Hiren Mehta+1)",
+    "new": "70 4BHK Bungalow for Sale at Cosmos Hawain, Thane"
+  },
+  {
+    "old": "69 4BHK Villa in Lonavala for Sale at the Cost of 2BHK Flat (Hiren Mehta Broker)",
+    "new": "69 4BHK Villa in Lonavala for Sale at the Cost of 2BHK Flat"
+  },
+  {
+    "old": "72 1BHK for Sale in Mulund West (Sadashiv Ghag Broker)",
+    "new": "72 1BHK for Sale in Mulund West"
+  },
+  {
+    "old": "73 1BHK for Sale at Ovla Ghodbunder Road, Thane (Yashasvi Dayal BNI Broker)",
+    "new": "73 1BHK for Sale at Ovla Ghodbunder Road, Thane"
+  },
+  {
+    "old": "71 2BHK Flat for Sale in Sarvodaya Nagar Mulund West (Broker Raju Bhai)",
+    "new": "71 2BHK Flat for Sale in Sarvodaya Nagar Mulund West"
+  },
+  {
+    "old": "74 3BHK for Sale in Montana Rosa, Mulund West (MV George)",
+    "new": "74 3BHK for Sale in Montana Rosa, Mulund West"
+  },
+  {
+    "old": "77 Commercial Space on Lease near Mulund West Station, Mumbai (Shashikant Thakkar)",
+    "new": "77 Commercial Space on Lease near Mulund West Station, Mumbai"
+  },
+  {
+    "old": "76 Bungalow for Sale in Koparkhairne, Navi Mumbai (Prashant Garude)",
+    "new": "76 Bungalow for Sale in Koparkhairne, Navi Mumbai"
+  },
+  {
+    "old": "75 4BHK Luxurious Villa with Private Pool in Lonavala (Seenu Rhythm Resitel The Club-Builder)",
+    "new": "75 4BHK Luxurious Villa with Private Pool in Lonavala"
+  },
+  {
+    "old": "81 32 Acres Land for Sale in Kalher Bhiwandi (Kaushik Shah Bhiwandi Broker)",
+    "new": "81 32 Acres Land for Sale in Kalher Bhiwandi"
+  },
+  {
+    "old": "82 2BHK on Rent near Apna Bazar, Mulund West (Balan Krishnan Broker)",
+    "new": "82 2BHK on Rent near Apna Bazar, Mulund West"
+  },
+  {
+    "old": "80 Pre-Leased Restaurant and Bar on Sale in Kalyan West (Balan Krishnan Broker)",
+    "new": "80 Pre-Leased Restaurant and Bar on Sale in Kalyan West"
+  },
+  {
+    "old": "83 Hospital for Sale on Ghod Bunder Road, Thane (Sharif Sayyed Broker)",
+    "new": "83 Hospital for Sale on Ghod Bunder Road, Thane"
+  },
+  {
+    "old": "79 3BHK on Rent near Apna Bazar, Mulund West (Balan Krishnan Broker)",
+    "new": "79 3BHK on Rent near Apna Bazar, Mulund West"
+  },
+  {
+    "old": "78 Shop on Rent on LBS Road, Mulund West, Mumbai (Yogesh Karia)",
+    "new": "78 Shop on Rent on LBS Road, Mulund West, Mumbai"
+  },
+  {
+    "old": "84 Sale -120 Acres Land Near Vadhavan Port Palghar (Balan Krishnan Broker)",
+    "new": "84 Sale -120 Acres Land Near Vadhavan Port Palghar"
+  },
+  {
+    "old": "85 Fully Furnished Office on Rent in Kanchpada Malad West (Hiren Mehta Direct)",
+    "new": "85 Fully Furnished Office on Rent in Kanchpada Malad West"
+  },
+  {
+    "old": "86 Shop for Sale or Rent on IB Patel Road, Goregaon East (Punit Vora Arkade Builder)",
+    "new": "86 Shop for Sale or Rent on IB Patel Road, Goregaon East"
+  },
+  {
+    "old": "87 Pharma Plant for Sale in Ankleshwar (Prakashbhai Chadderwala Skylark)",
+    "new": "87 Pharma Plant for Sale in Ankleshwar"
+  },
+  {
+    "old": "89 Bungalow for Sale in Lonavala at the Cost of Flat in Mumbai (Deepak K Broker+1)",
+    "new": "89 Bungalow for Sale in Lonavala at the Cost of Flat in Mumbai"
+  },
+  {
+    "old": "88 Commercial Space on Rent in Mulund West (Kewal Savla Healthy Palate-Michael Enclave)",
+    "new": "88 Commercial Space on Rent in Mulund West"
+  },
+  {
+    "old": "90 Office Space 250 Workstations for Rent in Mahape Vashi (Kavita Sadre Broker)",
+    "new": "90 Office Space 250 Workstations for Rent in Mahape Vashi"
+  },
+  {
+    "old": "91 A-Grade Office Space in Turbhe on Rent (Kunal Gori Plutonium Group Vashi Builder)",
+    "new": "91 A-Grade Office Space in Turbhe on Rent"
+  },
+  {
+    "old": "93 Fully Furnished Office Space on Long Lease in Andheri MIDC (Hemant Joshi Broker)",
+    "new": "93 Fully Furnished Office Space on Long Lease in Andheri MIDC"
+  },
+  {
+    "old": "92 Commercial Space on Lease at Mahape-MIDC, Navi Mumbai (Ishwar Sancheti)",
+    "new": "92 Commercial Space on Lease at Mahape-MIDC, Navi Mumbai"
+  },
+  {
+    "old": "95 2BHK Flat for Sale in Kalpataru Hills, Manpada, Thane (Broker Raju Bhai)",
+    "new": "95 2BHK Flat for Sale in Kalpataru Hills, Manpada, Thane"
+  },
+  {
+    "old": "94 Premium 3BHK on Rent in Oberoi Eternia, Mulund West (Priyank Bhatia_Jagdish Broker)",
+    "new": "94 Premium 3BHK on Rent in Oberoi Eternia, Mulund West"
+  },
+  {
+    "old": "96 Commercial Office Space near Kabutarkhana in Dadar West (Lion Mayur Shethia Builder)",
+    "new": "96 Commercial Office Space near Kabutarkhana in Dadar West"
+  },
+  {
+    "old": "98 3BHK Flat for Sale Near Apna Bazar, Mulund West (Hiren Mehta Broker)",
+    "new": "98 3BHK Flat for Sale Near Apna Bazar, Mulund West"
+  },
+  {
+    "old": "97 Fully Furnished 3BHK on Rent on Mulund Goregaon Link Road, Mulund (Balan Krishnan Broker)",
+    "new": "97 Fully Furnished 3BHK on Rent on Mulund Goregaon Link Road, Mulund"
+  },
+  {
+    "old": "99 4BHK Luxurious Villa with Private Pool in Lonavala (Seenu Rhythm Resitel The Club-Builder)",
+    "new": "99 4BHK Luxurious Villa with Private Pool in Lonavala"
+  },
+  {
+    "old": "103 Retail Shops and Premium Office in Turbhe (Pramila Yadav Emperia Project by Dhiraj Manjeri)",
+    "new": "103 Retail Shops and Premium Office in Turbhe"
+  },
+  {
+    "old": "100 2BHK Flat for Sale in Lok Nisarg Mulund West (Broker Raju Bhai)",
+    "new": "100 2BHK Flat for Sale in Lok Nisarg Mulund West"
+  },
+  {
+    "old": "101 2.5 BHK Flat for Sale in Neptune Living Point in Bhandup West, Mumbai (Balan Krishnan Broker)",
+    "new": "101 2.5 BHK Flat for Sale in Neptune Living Point in Bhandup West, Mumbai"
+  },
+  {
+    "old": "102 2.5 BHK Mahavir Majestic, Behind D-Mart, Kanjurmarg West, Mumbai (Deepak K Broker)",
+    "new": "102 2.5 BHK Mahavir Majestic, Behind D-Mart, Kanjurmarg West, Mumbai"
+  },
+  {
+    "old": "104 Luxury Villas in Bhatan near Panvel ((Pramila Yadav Emperia Project by Dhiraj Manjeri))",
+    "new": "104 Luxury Villas in Bhatan near Panvel)"
+  },
+  {
+    "old": "105 Commercial Space on Rent near Mulund West Railway Station (Deepti Manisha Developers)",
+    "new": "105 Commercial Space on Rent near Mulund West Railway Station"
+  },
+  {
+    "old": "108 1BHK and 2BHK Flat for Sale on Murar Road, Mulund West (Deepti Manisha Developers)",
+    "new": "108 1BHK and 2BHK Flat for Sale on Murar Road, Mulund West"
+  },
+  {
+    "old": "109 Commercial Space on Lease at Mahakali Caves Road, Andheri East (Varkey - Bobby Patani Owner)",
+    "new": "109 Commercial Space on Lease at Mahakali Caves Road, Andheri East"
+  },
+  {
+    "old": "106 Fully Furnished 2BHK for Sale in Lodha Grandezza, Wagle Estate, Thane (Broker Raju Bhai)",
+    "new": "106 Fully Furnished 2BHK for Sale in Lodha Grandezza, Wagle Estate, Thane"
+  },
+  {
+    "old": "107 Fully Furnished 2BHK for Sale in Vasant Fiona, Near Vivanan Mall, Thane (Broker Raju Bhai)",
+    "new": "107 Fully Furnished 2BHK for Sale in Vasant Fiona, Near Vivanan Mall, Thane"
+  },
+  {
+    "old": "110 Premium Commercial Offices for Sale and Rent in Andheri West (LK Makharia Owner)",
+    "new": "110 Premium Commercial Offices for Sale and Rent in Andheri West"
+  },
+  {
+    "old": "113 Office Space for Sale Near Metro Andheri East (Samir Gokani Broker)",
+    "new": "113 Office Space for Sale Near Metro Andheri East"
+  },
+  {
+    "old": "112 2.5BHK for Sale in Kalpataru Aura, Ghatkopar West (Balan Krishnan Broker)",
+    "new": "112 2.5BHK for Sale in Kalpataru Aura, Ghatkopar West"
+  },
+  {
+    "old": "111 Commercial Office Space for Sale Near Mulund Station (Santosh Potdar Thane Broker)",
+    "new": "111 Commercial Office Space for Sale Near Mulund Station"
+  },
+  {
+    "old": "115 2BHK and 3BHK for Sale at Siesta Prestige City Mulund, Mumbai (Jigar Shelugar Builder)",
+    "new": "115 2BHK and 3BHK for Sale at Siesta Prestige City Mulund, Mumbai"
+  },
+  {
+    "old": "116 Road Touch Showroom Space for Rent in Malad West (Priti Jagdale Direct Modi Group)",
+    "new": "116 Road Touch Showroom Space for Rent in Malad West"
+  },
+  {
+    "old": "114 2BHK and 3BHK Premium Flats on JN Road, Mulund West, Mumbai (Poonam Horizon Promoters_Atulya)",
+    "new": "114 2BHK and 3BHK Premium Flats on JN Road, Mulund West, Mumbai"
+  },
+  {
+    "old": "117 5BHK Villa for Sale at Devlali Nasik (Brig Mehbubani Devlali)-Not on YT",
+    "new": "117 5BHK Villa for Sale at Devlali Nasik-Not on YT"
+  },
+  {
+    "old": "118 3 BHK For Sale At Regency Heights, Kolshet Road, Thane (Bhavesh Manjrekar Beyond Heights Broker)",
+    "new": "118 3 BHK For Sale At Regency Heights, Kolshet Road, Thane"
+  },
+  {
+    "old": "121 Chembur Plot in Sindhi Society for Redevelopment (Balan Krishnan Broker) - Not on YT",
+    "new": "121 Chembur Plot in Sindhi Society for Redevelopment - Not on YT"
+  },
+  {
+    "old": "119 Redevelopment Project in Vikhroli East (Balan Krishnan Broker) -Not on YT",
+    "new": "119 Redevelopment Project in Vikhroli East -Not on YT"
+  },
+  {
+    "old": "122 2BHK Flat for Sale in Raynond Ten X, Vartak Nagar, Thane (Santosh Potdar Thane Broker)",
+    "new": "122 2BHK Flat for Sale in Raynond Ten X, Vartak Nagar, Thane"
+  },
+  {
+    "old": "120 Commercial Property for Sale and Lease on Dumping Road, Mulund (Harsh Badkur Owner)",
+    "new": "120 Commercial Property for Sale and Lease on Dumping Road, Mulund"
+  },
+  {
+    "old": "123 2BHK on Rent in Great Eastern Garden, LBS Road, Kanjur Marg West, Mumbai (Yogesh Pandey Broker)",
+    "new": "123 2BHK on Rent in Great Eastern Garden, LBS Road, Kanjur Marg West, Mumbai"
+  },
+  {
+    "old": "125 17 Room Hotel for Sale in Mahabaleshwar ((Vinayak Rajguru Pushkraj Hotel)",
+    "new": "125 17 Room Hotel for Sale in Mahabaleshwar"
+  },
+  {
+    "old": "124 3BHK for Sale Near Navghar Police Station, Mulund East, Mumbai (Deepak K Broker)",
+    "new": "124 3BHK for Sale Near Navghar Police Station, Mulund East, Mumbai"
+  },
+  {
+    "old": "127 3BHK for Sale at Soham Tropical Lagoon, Kasarvadavli, Thane (Sandeep Gupta)",
+    "new": "127 3BHK for Sale at Soham Tropical Lagoon, Kasarvadavli, Thane"
+  },
+  {
+    "old": "129 Open Plot for Lease near Viviana Mall, Thane (Vinod Sharma Viviana Thane)",
+    "new": "129 Open Plot for Lease near Viviana Mall, Thane"
+  },
+  {
+    "old": "126 Commercial Office Space for Sale or Rent Near Teen Petrol Pump, Naupada Thane (Ketan Shah and Ajay Dubey)",
+    "new": "126 Commercial Office Space for Sale or Rent Near Teen Petrol Pump, Naupada Thane"
+  },
+  {
+    "old": "128 4BHK Duplex Flat for Sale in India Bulls Panvel (Prem Menon)",
+    "new": "128 4BHK Duplex Flat for Sale in India Bulls Panvel"
+  },
+  {
+    "old": "130 Industrial Shed close to Vadhawan Port Available on Rent (Pranjal Kansara Kandivali)",
+    "new": "130 Industrial Shed close to Vadhawan Port Available on Rent"
+  },
+  {
+    "old": "136 Office Available on Rent in Shivam IT Park, Road No. 16, Wagle Estate, Thane West (Rahul Wankhede)",
+    "new": "136 Office Available on Rent in Shivam IT Park, Road No. 16, Wagle Estate, Thane West"
+  },
+  {
+    "old": "138 Commercial Office Space for Sale in Marol (Heena Gandhi Broker)",
+    "new": "138 Commercial Office Space for Sale in Marol"
+  },
+  {
+    "old": "135 6BHK Bungalow on Rent in Mulund West (Kunal Thakkar Model Town)",
+    "new": "135 6BHK Bungalow on Rent in Mulund West"
+  },
+  {
+    "old": "134 3BHK Semi-Furnished Flat Available for Rent in Gavane Pada Mulund West (Kirit Chavhan Broker)",
+    "new": "134 3BHK Semi-Furnished Flat Available for Rent in Gavane Pada Mulund West"
+  },
+  {
+    "old": "137 Office Available on Rent in MBC Infotech Park, GB Road, Thane (Mukul Kukreja Broker)",
+    "new": "137 Office Available on Rent in MBC Infotech Park, GB Road, Thane"
+  },
+  {
+    "old": "131 5BHK & 7BHK Duplex Flats for Sale in Piramal Revanta Mulund (Mayank Piramal Realty Revanta Mulund)",
+    "new": "131 5BHK & 7BHK Duplex Flats for Sale in Piramal Revanta Mulund"
+  },
+  {
+    "old": "133 Ready Condition Cricket Turf Available for Rent in Bhandup (Vinod Sharma Viviana Thane)",
+    "new": "133 Ready Condition Cricket Turf Available for Rent in Bhandup"
+  },
+  {
+    "old": "132 Warehouse Space available on Rent in Bhiwandi (Sunil Wagh Broker)",
+    "new": "132 Warehouse Space available on Rent in Bhiwandi"
+  },
+  {
+    "old": "139 Commercial Office Space for Sale in Santacruz West (Heena Gandhi Broker)",
+    "new": "139 Commercial Office Space for Sale in Santacruz West"
+  },
+  {
+    "old": "140 Warehouse in Bhiwandi Available for Sale (Rajesh Hindocha)",
+    "new": "140 Warehouse in Bhiwandi Available for Sale"
+  },
+  {
+    "old": "141 Commercial Gala Available on Sale at Marol Maroshi, Andheri (Hiren Mehta)",
+    "new": "141 Commercial Gala Available on Sale at Marol Maroshi, Andheri"
+  },
+  {
+    "old": "145 2BHK Fully Furnished Flat Available on Rent on NS Road Mulund West (Deepa Asnani Broker)",
+    "new": "145 2BHK Fully Furnished Flat Available on Rent on NS Road Mulund West"
+  },
+  {
+    "old": "144 2BHK Available for Sale in Runwal Greens Mulund West, Mumbai (Kaushikh Sharma Kanjurmarg Broker)",
+    "new": "144 2BHK Available for Sale in Runwal Greens Mulund West, Mumbai"
+  },
+  {
+    "old": "142 Restaurant Space Available for Sale near Goregaon Railway Station, Mumbai (Deepak Goregaon Restaurant)",
+    "new": "142 Restaurant Space Available for Sale near Goregaon Railway Station, Mumbai"
+  },
+  {
+    "old": "143 Cloud Kitchen Space Available on Rent at Panchpakhadi, Thane (Raunak Khandelwal)",
+    "new": "143 Cloud Kitchen Space Available on Rent at Panchpakhadi, Thane"
+  },
+  {
+    "old": "146 2BHK Lodha Paradise, Majiwada, Thane (W) (Amit Gore Thane)",
+    "new": "146 2BHK Lodha Paradise, Majiwada, Thane"
+  },
+  {
+    "old": "147 1BHK + 1BHK Jodi Flats Available for Sale in Dombivali West (Amit Gore Thane)",
+    "new": "147 1BHK + 1BHK Jodi Flats Available for Sale in Dombivali West"
+  },
+  {
+    "old": "150 Bungalow on Rent near Johnson and Johnson, Mulund West (Rajesh Dand Panvel Broker)",
+    "new": "150 Bungalow on Rent near Johnson and Johnson, Mulund West"
+  },
+  {
+    "old": "149 Shop Available for Sale in Tembi Pada, Bhandup West (Bharat Doshi Bhandup Godown)",
+    "new": "149 Shop Available for Sale in Tembi Pada, Bhandup West"
+  },
+  {
+    "old": "148 Commercial Building for Sale in Kanjurmarg (Kantilal Kundalia)",
+    "new": "148 Commercial Building for Sale in Kanjurmarg"
+  },
+  {
+    "old": "151 3BHK Flat Available for Sale in Oberoi Towers Mulund West (Kapil Bhagat Owner)",
+    "new": "151 3BHK Flat Available for Sale in Oberoi Towers Mulund West"
+  },
+  {
+    "old": "153 Gala Office Space Available for Rent in UDYOGKSHETRA INDL PREMISES Mulund West (Rajkumar Yadav Owner)",
+    "new": "153 Gala Office Space Available for Rent in UDYOGKSHETRA INDL PREMISES Mulund West"
+  },
+  {
+    "old": "152 Industrial Gala Available for Sale in Minerva Industrial Estate, Mulund West (Ridham Gala Owner)",
+    "new": "152 Industrial Gala Available for Sale in Minerva Industrial Estate, Mulund West"
+  },
+  {
+    "old": "154 3 BHK Fully Furn Premium Flat, Higher Floor @Hiranandani 1 Park, Thane (CA Laxmikant Kabra Owner)",
+    "new": "154 3 BHK Fully Furn Premium Flat, Higher Floor @Hiranandani 1 Park, Thane"
+  },
+  {
+    "old": "155 Premium Fully Furnished Office Available for Sale Opposite Thane West Station (Madhav Divekar Owner)",
+    "new": "155 Premium Fully Furnished Office Available for Sale Opposite Thane West Station"
+  },
+  {
+    "old": "156 Shop inside Neptune Mall Available for Sale in Bhandup West (Aslam Vitskamats Group Bhandup Owner)",
+    "new": "156 Shop inside Neptune Mall Available for Sale in Bhandup West"
+  },
+  {
+    "old": "157 Land for Sale in MIDC Wagle Estate, Thane (Anil Teckchandani Owner)",
+    "new": "157 Land for Sale in MIDC Wagle Estate, Thane"
+  },
+  {
+    "old": "158 Bungalow for Sale or Rent in Borivali (Vinod Devkate Broker)",
+    "new": "158 Bungalow for Sale or Rent in Borivali"
+  },
+  {
+    "old": "161 Commercial Office on Rent on Eastern Express Highway, Louiswadi, Thane West (Naval Minsaria Owner)",
+    "new": "161 Commercial Office on Rent on Eastern Express Highway, Louiswadi, Thane West"
+  },
+  {
+    "old": "160 3BHK on Sale at Suncrest Accolade Complex, Louiswadi, Thane (Nishikant Bapat Owner)",
+    "new": "160 3BHK on Sale at Suncrest Accolade Complex, Louiswadi, Thane"
+  },
+  {
+    "old": "159 Commercial Space on Rent in Chembur (Prakash Karavade Provisco Broker)",
+    "new": "159 Commercial Space on Rent in Chembur"
+  },
+  {
+    "old": "162 4BHK Premium Bungalow for Sale on Ghodbunder Road, Thane West (Nitin Sangote Owner)",
+    "new": "162 4BHK Premium Bungalow for Sale on Ghodbunder Road, Thane West"
+  },
+  {
+    "old": "163 Commercial Office in Dev Corpora, Near Cadbury Junction, Thane West (Broker Raju Bhai)",
+    "new": "163 Commercial Office in Dev Corpora, Near Cadbury Junction, Thane West"
+  },
+  {
+    "old": "165 Commercial Office Available on Rent in Marathon Max, Mulund West (Dipen Royalty Minerals Owner)___Gone",
+    "new": "165 Commercial Office Available on Rent in Marathon Max, Mulund West"
+  },
+  {
+    "old": "164 Running South Indian Restaurant Available for Sale in Bhiwandi (Tanaji Chavan Owner)",
+    "new": "164 Running South Indian Restaurant Available for Sale in Bhiwandi"
+  },
+  {
+    "old": "166 2BHK Semi-Furnished Flat Available for Sale in Mulund East (Vinaya Shrikant Owner)",
+    "new": "166 2BHK Semi-Furnished Flat Available for Sale in Mulund East"
+  },
+  {
+    "old": "169 Industrial Gala Available for Sale in Wagle Estate, Thane West (Bhavesh Ghela Owner)",
+    "new": "169 Industrial Gala Available for Sale in Wagle Estate, Thane West"
+  },
+  {
+    "old": "168 2BHK Semi Furnished Flat Avaialble for Sale near Thane West (Shamkant Damle Owner)",
+    "new": "168 2BHK Semi Furnished Flat Avaialble for Sale near Thane West"
+  },
+  {
+    "old": "167 Commercial Property Available on Rent Near Thane West Station (Kishore Medhe Owner)",
+    "new": "167 Commercial Property Available on Rent Near Thane West Station"
+  },
+  {
+    "old": "170 Running Restaurant cum Bar with License Available for Sale (Skylon Vijay Sir Broker)",
+    "new": "170 Running Restaurant cum Bar with License Available for Sale"
+  },
+  {
+    "old": "171 Bungalow Available for Sale or Rent in Mulund East (Pratik Shah Broker)",
+    "new": "171 Bungalow Available for Sale or Rent in Mulund East"
+  },
+  {
+    "old": "174 1BHK Available for Sale on JN Road Near Apna Bazar Mulund West (Vimal Gosar)",
+    "new": "174 1BHK Available for Sale on JN Road Near Apna Bazar Mulund West"
+  },
+  {
+    "old": "175 2.5 BHK Available for Sale in Runwal Garden City, Balum-Dhokali, Thane West (Shailesh Dahake Balkum)",
+    "new": "175 2.5 BHK Available for Sale in Runwal Garden City, Balum-Dhokali, Thane West"
+  },
+  {
+    "old": "172 Commercial Office Space on Rent in Wagle Estate (Yash Konar Business Park)",
+    "new": "172 Commercial Office Space on Rent in Wagle Estate"
+  },
+  {
+    "old": "173 Office Available for Sale in Centura Square Waghle Estate Thane (Ketan Sarvaiya Wagle)",
+    "new": "173 Office Available for Sale in Centura Square Waghle Estate Thane"
+  },
+  {
+    "old": "178 2BHK Available for Sale Near Jain Derasar, Sarvodaya Nagar, Mulund West (Ranjit Angre)",
+    "new": "178 2BHK Available for Sale Near Jain Derasar, Sarvodaya Nagar, Mulund West"
+  },
+  {
+    "old": "176 Commercial Office Available for Sale or Rent in Wagle Estate Thane (Aniruddha Yadav Wagle)",
+    "new": "176 Commercial Office Available for Sale or Rent in Wagle Estate Thane"
+  },
+  {
+    "old": "179 Bar & Restaurant available for Rent in Kavesar, Thane (Vijay Singh Chauhan)",
+    "new": "179 Bar & Restaurant available for Rent in Kavesar, Thane"
+  },
+  {
+    "old": "177 50 Gunthas Land Parcel in Alibaug (Priyesh Somaiya)",
+    "new": "177 50 Gunthas Land Parcel in Alibaug"
+  },
+  {
+    "old": "181 Industrial Gala Available for Rent in Bhandup West (Karan Mehta)",
+    "new": "181 Industrial Gala Available for Rent in Bhandup West"
+  },
+  {
+    "old": "180 Running Hotel 7 Floors on Sale in Mulund East (Vicky Virtej Ghag)",
+    "new": "180 Running Hotel 7 Floors on Sale in Mulund East"
+  },
+  {
+    "old": "182 2BHK Flat available for Sale in Auralis Tower near Teen Haath Naka, Thane (Sunil Deshpande)",
+    "new": "182 2BHK Flat available for Sale in Auralis Tower near Teen Haath Naka, Thane"
+  },
+  {
+    "old": "183 Ground +2 Bungalow available for Sale in Bhandup East (Sunil Chitale Chitpawan)",
+    "new": "183 Ground +2 Bungalow available for Sale in Bhandup East"
+  },
+  {
+    "old": "184 20,000 Sq.Ft. Carpet Area Commercial Space Exclusive for Education Institution available on RENT in Thane (Sagar Sakat)",
+    "new": "184 20,000 Sq.Ft. Carpet Area Commercial Space Exclusive for Education Institution available on RENT in Thane"
+  },
+  {
+    "old": "185 Fully Furnished Office Available on Rent in Panchpakhadi, Thane (Sharad Chandra)",
+    "new": "185 Fully Furnished Office Available on Rent in Panchpakhadi, Thane"
+  },
+  {
+    "old": "186 Running Engineering College Available on Sale in Ambernath (Kaushik Shah Bhiwandi)",
+    "new": "186 Running Engineering College Available on Sale in Ambernath"
+  },
+  {
+    "old": "188 Land & Building available for Sale in Bhiwandi (Kaushik Shah Bhiwandi)",
+    "new": "188 Land & Building available for Sale in Bhiwandi"
+  },
+  {
+    "old": "187 School Building on Rent or Sale in Thane (Kaushik Shah Bhiwandi)",
+    "new": "187 School Building on Rent or Sale in Thane"
+  },
+  {
+    "old": "190 1BHK in Ulwe (Ameet Padwal)",
+    "new": "190 1BHK in Ulwe"
+  },
+  {
+    "old": "189 3 Running Schools for Sale in Mumbai (Kaushik Shah Bhiwandi)",
+    "new": "189 3 Running Schools for Sale in Mumbai"
+  },
+  {
+    "old": "193 Plot available for Sale in Nahur West (Vinod Devkate Borivali Broker)",
+    "new": "193 Plot available for Sale in Nahur West"
+  },
+  {
+    "old": "192 PlotAvailable for Sale in Vile Parle West (Vinod Devkate Borivali Broker)",
+    "new": "192 PlotAvailable for Sale in Vile Parle West"
+  },
+  {
+    "old": "191 25,000 Sq.Ft. Warehouse on Rent in Bhiwandi (Kaushik Shah Bhiwandi Broker)",
+    "new": "191 25,000 Sq.Ft. Warehouse on Rent in Bhiwandi"
+  },
+  {
+    "old": "198 4BHK Available on Rent Near Kelkar College, Mulund East (Bhavesh Manjrekar Broker)",
+    "new": "198 4BHK Available on Rent Near Kelkar College, Mulund East"
+  },
+  {
+    "old": "197 2BHK & 3BHK Available for Sale near Ambe Mata Chowk, Vile Parle West, Mumbai (Manisha Dedhia Navkaar Real Estate Vileparle)",
+    "new": "197 2BHK & 3BHK Available for Sale near Ambe Mata Chowk, Vile Parle West, Mumbai"
+  },
+  {
+    "old": "196 4BHK Row House Available for Sale near Western Express Highway in Borivali East (Chandrakant Hiranandani)",
+    "new": "196 4BHK Row House Available for Sale near Western Express Highway in Borivali East"
+  },
+  {
+    "old": "195 Independent Commercial Building Available for Sale at Chakala, Andheri East (Satyajit Gawde Broker)",
+    "new": "195 Independent Commercial Building Available for Sale at Chakala, Andheri East"
+  },
+  {
+    "old": "194 6BHK Row House Available on Rent or Sale in Link Road, Borivali West (Vinod Devkate Broker)",
+    "new": "194 6BHK Row House Available on Rent or Sale in Link Road, Borivali West"
+  },
+  {
+    "old": "199 2BHK and 3BHK Under Construction Available for Sale in Swapna Nagri, Veena Nagar, Mulund West (Sayli Paradise Enclave Builder)",
+    "new": "199 2BHK and 3BHK Under Construction Available for Sale in Swapna Nagri, Veena Nagar, Mulund West"
+  },
+  {
+    "old": "200 2BHK Flat Available for Sale in Runwal Sanctuary (Ankit Mirani)",
+    "new": "200 2BHK Flat Available for Sale in Runwal Sanctuary"
+  },
+  {
+    "old": "202 120 Acres Land Available for Sale in Khalgaon, Ratnagiri (Kaushik Khimasiya Shah Bhiwandi Broker and Bipin Mishra Vashi Broker)",
+    "new": "202 120 Acres Land Available for Sale in Khalgaon, Ratnagiri"
+  },
+  {
+    "old": "201 Plot for Sale Near Hiranandani Estate, Thane (Nilesh Salvi Broker)",
+    "new": "201 Plot for Sale Near Hiranandani Estate, Thane"
+  },
+  {
+    "old": "204 3.5BHK Available for Sale in Lodha Regalia, Mulund East, Mumbai (Dr. Prity Satra)",
+    "new": "204 3.5BHK Available for Sale in Lodha Regalia, Mulund East, Mumbai"
+  },
+  {
+    "old": "203 Premium Ground Floor Commercial Space Available on Rent – Mulund West, Mumbai (Ronaldo Fernandes)",
+    "new": "203 Premium Ground Floor Commercial Space Available on Rent – Mulund West, Mumbai"
+  },
+  {
+    "old": "205 Industrial Gala for Sale on Ground Floor Devi Dayal Road, Mulund West (Rajesh Dand Broker)",
+    "new": "205 Industrial Gala for Sale on Ground Floor Devi Dayal Road, Mulund West"
+  },
+  {
+    "old": "01 3 BHK + 3BHK Jodi Flat -Michael Enclave (Kewal Savla)",
+    "new": "01 3 BHK + 3BHK Jodi Flat"
+  },
+  {
+    "old": "03 Madrecha Heights, Wagle Estate (Ashok Madrecha)",
+    "new": "03 Madrecha Heights, Wagle Estate"
+  },
+  {
+    "old": "02 2BHK City of Joy-Shankar Iyer",
+    "new": "02 2BHK City of Joy"
+  },
+  {
+    "old": "05 Thane 21 Acres Land Parcel (Girish Patki)",
+    "new": "05 Thane 21 Acres Land Parcel"
+  },
+  {
+    "old": "07 Kateeleshwari Arcade_Abhishek Shetty",
+    "new": "07 Kateeleshwari Arcade"
+  }
+]
