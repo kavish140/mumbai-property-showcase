@@ -22,11 +22,7 @@ export async function getProperties(): Promise<Property[]> {
 }
 
 export async function getProperty(id: string): Promise<Property | null> {
-  const { data, error } = await supabase
-    .from("properties")
-    .select("*")
-    .eq("id", id)
-    .single();
+  const { data, error } = await supabase.from("properties").select("*").eq("id", id).single();
 
   if (error) {
     console.error("Error fetching property:", error);

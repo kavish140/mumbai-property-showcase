@@ -30,7 +30,12 @@ export function useProperties() {
 
   const updateMutation = useMutation({
     mutationFn: async ({ id, ...p }: Partial<Property> & { id: string }) => {
-      const { data, error } = await supabase.from("properties").update(p).eq("id", id).select().single();
+      const { data, error } = await supabase
+        .from("properties")
+        .update(p)
+        .eq("id", id)
+        .select()
+        .single();
       if (error) throw error;
       return data;
     },
@@ -53,7 +58,8 @@ export function useProperties() {
     properties,
     isLoading,
     addProperty: (p: Omit<Property, "id">) => addMutation.mutateAsync(p),
-    updateProperty: (id: string, p: Omit<Property, "id">) => updateMutation.mutateAsync({ id, ...p }),
+    updateProperty: (id: string, p: Omit<Property, "id">) =>
+      updateMutation.mutateAsync({ id, ...p }),
     deleteProperty: (id: string) => deleteMutation.mutateAsync(id),
   };
 }

@@ -4,12 +4,23 @@ import { Plus, Pencil, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import {
-  Table, TableBody, TableCell, TableHead, TableHeader, TableRow,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import {
-  AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent,
-  AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle,
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { useProperties } from "@/hooks/use-properties";
 import { formatINR, type Property, type PropertyStatus } from "@/types/property";
@@ -17,10 +28,7 @@ import { PropertyDialog } from "@/components/admin/PropertyDialog";
 
 export const Route = createFileRoute("/admin/properties")({
   head: () => ({
-    meta: [
-      { title: "Properties · Admin" },
-      { name: "robots", content: "noindex,nofollow" },
-    ],
+    meta: [{ title: "Properties · Admin" }, { name: "robots", content: "noindex,nofollow" }],
   }),
   component: PropertiesPage,
 });
@@ -37,8 +45,14 @@ function PropertiesPage() {
   const [editing, setEditing] = useState<Property | null>(null);
   const [deletingId, setDeletingId] = useState<string | null>(null);
 
-  function openAdd() { setEditing(null); setDialogOpen(true); }
-  function openEdit(p: Property) { setEditing(p); setDialogOpen(true); }
+  function openAdd() {
+    setEditing(null);
+    setDialogOpen(true);
+  }
+  function openEdit(p: Property) {
+    setEditing(p);
+    setDialogOpen(true);
+  }
 
   async function handleSave(data: Omit<Property, "id">) {
     try {
@@ -76,7 +90,10 @@ function PropertiesPage() {
             {properties.length} listings · changes persist in your browser
           </p>
         </div>
-        <Button onClick={openAdd} className="bg-primary text-primary-foreground hover:bg-primary/90">
+        <Button
+          onClick={openAdd}
+          className="bg-primary text-primary-foreground hover:bg-primary/90"
+        >
           <Plus className="mr-2 h-4 w-4" /> Add Property
         </Button>
       </div>
@@ -97,11 +114,19 @@ function PropertiesPage() {
             {properties.map((p) => (
               <TableRow key={p.id} className="hover:bg-muted/30">
                 <TableCell>
-                  <img src={p.imageUrl} alt="" className="h-12 w-16 rounded-md object-cover" loading="lazy" />
+                  <img
+                    src={p.imageUrl}
+                    alt=""
+                    className="h-12 w-16 rounded-md object-cover"
+                    loading="lazy"
+                  />
                 </TableCell>
                 <TableCell>
                   <div className="font-medium text-foreground">{p.title}</div>
-                  <div className="text-xs text-muted-foreground">{p.type} · {p.bedrooms > 0 ? `${p.bedrooms} bd · ` : ""}{p.areaSqft.toLocaleString()} sqft</div>
+                  <div className="text-xs text-muted-foreground">
+                    {p.type} · {p.bedrooms > 0 ? `${p.bedrooms} bd · ` : ""}
+                    {p.areaSqft.toLocaleString()} sqft
+                  </div>
                 </TableCell>
                 <TableCell className="text-muted-foreground">{p.location}</TableCell>
                 <TableCell className="text-right font-medium">{formatINR(p.price)}</TableCell>
@@ -110,7 +135,12 @@ function PropertiesPage() {
                 </TableCell>
                 <TableCell className="text-right">
                   <div className="flex justify-end gap-1">
-                    <Button variant="ghost" size="icon" onClick={() => openEdit(p)} aria-label="Edit">
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => openEdit(p)}
+                      aria-label="Edit"
+                    >
                       <Pencil className="h-4 w-4" />
                     </Button>
                     <Button
@@ -139,7 +169,10 @@ function PropertiesPage() {
 
       <PropertyDialog
         open={dialogOpen}
-        onOpenChange={(o) => { setDialogOpen(o); if (!o) setEditing(null); }}
+        onOpenChange={(o) => {
+          setDialogOpen(o);
+          if (!o) setEditing(null);
+        }}
         editing={editing}
         onSave={handleSave}
       />

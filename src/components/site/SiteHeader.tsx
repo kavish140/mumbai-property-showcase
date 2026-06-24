@@ -19,21 +19,33 @@ export function SiteHeader() {
           </span>
           <div className="leading-tight">
             <div className="font-display text-lg font-semibold text-foreground">Mumbai Realty</div>
-            <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Real Estate · Finance · Legal</div>
+            <div className="text-[10px] uppercase tracking-widest text-muted-foreground">
+              Real Estate · Finance · Legal
+            </div>
           </div>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
-          {navLinks.map((l) => (
+          {navLinks.map((l) =>
             l.to ? (
-              <Link key={l.to} to={l.to} className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground">
+              <Link
+                key={l.to}
+                to={l.to}
+                className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
+              >
                 {l.label}
               </Link>
             ) : (
-              <a key={l.href} href={l.href} target="_blank" rel="noreferrer" className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground">
+              <a
+                key={l.href}
+                href={l.href}
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
+              >
                 {l.label}
               </a>
-            )
-          ))}
+            ),
+          )}
         </nav>
         <div className="flex items-center gap-2">
           <Button asChild variant="ghost" className="hidden sm:inline-flex">

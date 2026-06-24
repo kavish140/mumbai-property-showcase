@@ -1,5 +1,14 @@
 import { createFileRoute, Link, Outlet, useRouterState } from "@tanstack/react-router";
-import { Building2, LayoutDashboard, Building, Users, Settings, Moon, Sun, Search } from "lucide-react";
+import {
+  Building2,
+  LayoutDashboard,
+  Building,
+  Users,
+  Settings,
+  Moon,
+  Sun,
+  Search,
+} from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -21,10 +30,7 @@ import { useTheme } from "@/lib/theme-provider";
 
 export const Route = createFileRoute("/admin")({
   head: () => ({
-    meta: [
-      { title: "Admin · Mumbai Realty" },
-      { name: "robots", content: "noindex,nofollow" },
-    ],
+    meta: [{ title: "Admin · Mumbai Realty" }, { name: "robots", content: "noindex,nofollow" }],
   }),
   component: AdminLayout,
 });
@@ -91,7 +97,10 @@ function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-        <Link to="/" className="px-2 py-1.5 text-xs opacity-70 hover:opacity-100 group-data-[collapsible=icon]:hidden">
+        <Link
+          to="/"
+          className="px-2 py-1.5 text-xs opacity-70 hover:opacity-100 group-data-[collapsible=icon]:hidden"
+        >
           ← Back to site
         </Link>
       </SidebarFooter>

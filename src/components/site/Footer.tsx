@@ -18,10 +18,31 @@ export function Footer() {
         <div>
           <h4 className="font-display text-sm font-semibold">Explore</h4>
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/services" className="hover:text-foreground">Services</Link></li>
-            <li><Link to="/properties" className="hover:text-foreground">Properties</Link></li>
-            <li><a href="https://youtube.com/@mumbairealestate9595" target="_blank" rel="noreferrer" className="hover:text-foreground">YouTube</a></li>
-            <li><Link to="/about" className="hover:text-foreground">About</Link></li>
+            <li>
+              <Link to="/services" className="hover:text-foreground">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link to="/properties" className="hover:text-foreground">
+                Properties
+              </Link>
+            </li>
+            <li>
+              <a
+                href="https://youtube.com/@mumbairealestate9595"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-foreground"
+              >
+                YouTube
+              </a>
+            </li>
+            <li>
+              <Link to="/about" className="hover:text-foreground">
+                About
+              </Link>
+            </li>
           </ul>
         </div>
         <div>

@@ -11,7 +11,8 @@ export const mockProperties: Property[] = [
     bedrooms: 4,
     bathrooms: 5,
     areaSqft: 3800,
-    description: "Sprawling penthouse with panoramic Arabian Sea views, private terrace, and premium Italian finishes.",
+    description:
+      "Sprawling penthouse with panoramic Arabian Sea views, private terrace, and premium Italian finishes.",
     imageUrl: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80",
   },
   {
@@ -24,7 +25,8 @@ export const mockProperties: Property[] = [
     bedrooms: 3,
     bathrooms: 3,
     areaSqft: 1450,
-    description: "Contemporary 3BHK in a gated tower with clubhouse, pool, and dedicated covered parking.",
+    description:
+      "Contemporary 3BHK in a gated tower with clubhouse, pool, and dedicated covered parking.",
     imageUrl: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1200&q=80",
   },
   {
@@ -37,7 +39,8 @@ export const mockProperties: Property[] = [
     bedrooms: 4,
     bathrooms: 4,
     areaSqft: 2100,
-    description: "Quiet, family-friendly 4BHK overlooking Powai Lake with private balcony and study.",
+    description:
+      "Quiet, family-friendly 4BHK overlooking Powai Lake with private balcony and study.",
     imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80",
   },
   {
@@ -50,7 +53,8 @@ export const mockProperties: Property[] = [
     bedrooms: 0,
     bathrooms: 4,
     areaSqft: 5200,
-    description: "Grade-A full-floor commercial space in a LEED-certified tower, ready for fit-out.",
+    description:
+      "Grade-A full-floor commercial space in a LEED-certified tower, ready for fit-out.",
     imageUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80",
   },
   {
@@ -63,7 +67,8 @@ export const mockProperties: Property[] = [
     bedrooms: 5,
     bathrooms: 6,
     areaSqft: 5600,
-    description: "Restored colonial villa with landscaped gardens, infinity pool, and staff quarters.",
+    description:
+      "Restored colonial villa with landscaped gardens, infinity pool, and staff quarters.",
     imageUrl: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1200&q=80",
   },
   {

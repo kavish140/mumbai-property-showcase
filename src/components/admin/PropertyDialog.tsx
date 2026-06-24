@@ -1,12 +1,23 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { toast } from "sonner";
 import {
-  Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle,
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import type { Property, PropertyStatus, PropertyType } from "@/types/property";
 
 interface Props {
@@ -17,8 +28,16 @@ interface Props {
 }
 
 const empty: Omit<Property, "id"> = {
-  title: "", location: "", price: 0, type: "Residential", status: "Available",
-  bedrooms: 0, bathrooms: 0, areaSqft: 0, description: "", imageUrl: "",
+  title: "",
+  location: "",
+  price: 0,
+  type: "Residential",
+  status: "Available",
+  bedrooms: 0,
+  bathrooms: 0,
+  areaSqft: 0,
+  description: "",
+  imageUrl: "",
 };
 
 export function PropertyDialog({ open, onOpenChange, editing, onSave }: Props) {
@@ -57,31 +76,53 @@ export function PropertyDialog({ open, onOpenChange, editing, onSave }: Props) {
             {editing ? "Edit property" : "Add new property"}
           </DialogTitle>
           <DialogDescription>
-            {editing ? "Update the listing details below." : "Fill in the listing details. All fields except bedrooms (for commercial) are required."}
+            {editing
+              ? "Update the listing details below."
+              : "Fill in the listing details. All fields except bedrooms (for commercial) are required."}
           </DialogDescription>
         </DialogHeader>
 
         <form onSubmit={submit} className="grid gap-4 py-2 sm:grid-cols-2">
           <div className="sm:col-span-2">
             <Label>Title</Label>
-            <Input value={form.title} onChange={(e) => update("title", e.target.value)} placeholder="Sea-View Penthouse" />
+            <Input
+              value={form.title}
+              onChange={(e) => update("title", e.target.value)}
+              placeholder="Sea-View Penthouse"
+            />
           </div>
           <div className="sm:col-span-2">
             <Label>Location</Label>
-            <Input value={form.location} onChange={(e) => update("location", e.target.value)} placeholder="Bandra West, Mumbai" />
+            <Input
+              value={form.location}
+              onChange={(e) => update("location", e.target.value)}
+              placeholder="Bandra West, Mumbai"
+            />
           </div>
           <div>
             <Label>Price (₹)</Label>
-            <Input type="number" min={0} value={form.price || ""} onChange={(e) => update("price", Number(e.target.value))} />
+            <Input
+              type="number"
+              min={0}
+              value={form.price || ""}
+              onChange={(e) => update("price", Number(e.target.value))}
+            />
           </div>
           <div>
             <Label>Area (sqft)</Label>
-            <Input type="number" min={0} value={form.areaSqft || ""} onChange={(e) => update("areaSqft", Number(e.target.value))} />
+            <Input
+              type="number"
+              min={0}
+              value={form.areaSqft || ""}
+              onChange={(e) => update("areaSqft", Number(e.target.value))}
+            />
           </div>
           <div>
             <Label>Type</Label>
             <Select value={form.type} onValueChange={(v) => update("type", v as PropertyType)}>
-              <SelectTrigger><SelectValue /></SelectTrigger>
+              <SelectTrigger>
+                <SelectValue />
+              </SelectTrigger>
               <SelectContent>
                 <SelectItem value="Residential">Residential</SelectItem>
                 <SelectItem value="Commercial">Commercial</SelectItem>
@@ -92,8 +133,13 @@ export function PropertyDialog({ open, onOpenChange, editing, onSave }: Props) {
           </div>
           <div>
             <Label>Status</Label>
-            <Select value={form.status} onValueChange={(v) => update("status", v as PropertyStatus)}>
-              <SelectTrigger><SelectValue /></SelectTrigger>
+            <Select
+              value={form.status}
+              onValueChange={(v) => update("status", v as PropertyStatus)}
+            >
+              <SelectTrigger>
+                <SelectValue />
+              </SelectTrigger>
               <SelectContent>
                 <SelectItem value="Available">Available</SelectItem>
                 <SelectItem value="Pending">Pending</SelectItem>
@@ -103,24 +149,48 @@ export function PropertyDialog({ open, onOpenChange, editing, onSave }: Props) {
           </div>
           <div>
             <Label>Bedrooms</Label>
-            <Input type="number" min={0} value={form.bedrooms} onChange={(e) => update("bedrooms", Number(e.target.value))} />
+            <Input
+              type="number"
+              min={0}
+              value={form.bedrooms}
+              onChange={(e) => update("bedrooms", Number(e.target.value))}
+            />
           </div>
           <div>
             <Label>Bathrooms</Label>
-            <Input type="number" min={0} value={form.bathrooms} onChange={(e) => update("bathrooms", Number(e.target.value))} />
+            <Input
+              type="number"
+              min={0}
+              value={form.bathrooms}
+              onChange={(e) => update("bathrooms", Number(e.target.value))}
+            />
           </div>
           <div className="sm:col-span-2">
             <Label>Image URL</Label>
-            <Input value={form.imageUrl} onChange={(e) => update("imageUrl", e.target.value)} placeholder="https://images.unsplash.com/…" />
+            <Input
+              value={form.imageUrl}
+              onChange={(e) => update("imageUrl", e.target.value)}
+              placeholder="https://images.unsplash.com/…"
+            />
           </div>
           <div className="sm:col-span-2">
             <Label>Description</Label>
-            <Textarea rows={4} value={form.description} onChange={(e) => update("description", e.target.value)} placeholder="Short description for the listing card…" />
+            <Textarea
+              rows={4}
+              value={form.description}
+              onChange={(e) => update("description", e.target.value)}
+              placeholder="Short description for the listing card…"
+            />
           </div>
 
           <DialogFooter className="sm:col-span-2">
-            <Button type="button" variant="outline" onClick={() => onOpenChange(false)}>Cancel</Button>
-            <Button type="submit" className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button type="button" variant="outline" onClick={() => onOpenChange(false)}>
+              Cancel
+            </Button>
+            <Button
+              type="submit"
+              className="bg-primary text-primary-foreground hover:bg-primary/90"
+            >
               {editing ? "Save changes" : "Add property"}
             </Button>
           </DialogFooter>
@@ -131,5 +201,7 @@ export function PropertyDialog({ open, onOpenChange, editing, onSave }: Props) {
 }
 
 function Label({ children }: { children: React.ReactNode }) {
-  return <label className="mb-1.5 block text-xs font-medium text-muted-foreground">{children}</label>;
+  return (
+    <label className="mb-1.5 block text-xs font-medium text-muted-foreground">{children}</label>
+  );
 }
