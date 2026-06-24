@@ -71,7 +71,7 @@ export function ContactSection() {
                 <Phone className="h-4 w-4 text-accent" /> <span className="text-foreground">+91 97571 90200</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
-                <Mail className="h-4 w-4 text-accent" /> <span className="text-foreground">hello@mumbairealty.in</span>
+                <Mail className="h-4 w-4 text-accent" /> <span className="text-foreground">ganatraj@gmail.com</span>
               </div>
               <p className="pt-2 text-xs text-muted-foreground">Office: G-54 Saidham Shopping Plaza, P.K. Road, Mulund West, Mumbai — Mon to Sat, 10am–7pm</p>
             </CardContent>

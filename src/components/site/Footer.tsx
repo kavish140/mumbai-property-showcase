@@ -20,7 +20,7 @@ export function Footer() {
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
             <li><a href="#services" className="hover:text-foreground">Services</a></li>
             <li><a href="#properties" className="hover:text-foreground">Properties</a></li>
-            <li><a href="#youtube" className="hover:text-foreground">YouTube</a></li>
+            <li><a href="https://youtube.com/@mumbairealestate9595" target="_blank" rel="noreferrer" className="hover:text-foreground">YouTube</a></li>
             <li><a href="#founder" className="hover:text-foreground">About</a></li>
           </ul>
         </div>
@@ -28,7 +28,7 @@ export function Footer() {
           <h4 className="font-display text-sm font-semibold">Contact</h4>
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
             <li>+91 97571 90200</li>
-            <li>hello@mumbairealty.in</li>
+            <li>ganatraj@gmail.com</li>
             <li>G-54, Saidham Shopping Plaza, P.K. Road, Mulund West, Mumbai</li>
           </ul>
         </div>
