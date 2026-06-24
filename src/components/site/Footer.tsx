@@ -27,9 +27,9 @@ export function Footer() {
         <div>
           <h4 className="font-display text-sm font-semibold">Contact</h4>
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-            <li>+91 99999 99999</li>
+            <li>+91 97571 90200</li>
             <li>hello@mumbairealty.in</li>
-            <li>BKC, Mumbai</li>
+            <li>G-54, Saidham Shopping Plaza, P.K. Road, Mulund West, Mumbai</li>
           </ul>
         </div>
       </div>

@@ -9,16 +9,8 @@ const disciplines = [
 export function FounderProfile() {
   return (
     <section id="founder" className="bg-gradient-navy text-primary-foreground">
-      <div className="container grid items-center gap-12 py-24 lg:grid-cols-[1fr_1.2fr]">
-        <div className="relative">
-          <div className="absolute -inset-4 -z-10 rounded-2xl bg-gradient-gold opacity-30 blur-2xl" />
-          <img
-            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=900&q=80"
-            alt="Founder portrait"
-            className="aspect-[4/5] w-full rounded-2xl object-cover shadow-card-hover"
-            loading="lazy"
-          />
-        </div>
+      <div className="container py-24">
+
         <div>
           <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent">Meet the founder</p>
           <h2 className="font-display text-4xl font-semibold leading-tight md:text-5xl">

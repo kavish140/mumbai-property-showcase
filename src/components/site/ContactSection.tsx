@@ -61,19 +61,19 @@ export function ContactSection() {
               <h3 className="font-display text-2xl font-semibold">Chat on WhatsApp</h3>
               <p className="mt-2 text-sm text-primary-foreground/75">Fastest way to reach us. Reply within minutes during business hours.</p>
               <Button asChild size="lg" className="mt-5 bg-accent text-accent-foreground hover:bg-accent/90">
-                <a href="https://wa.me/919999999999" target="_blank" rel="noreferrer">Open WhatsApp</a>
+                <a href="https://wa.me/919757190200" target="_blank" rel="noreferrer">Open WhatsApp</a>
               </Button>
             </CardContent>
           </Card>
           <Card className="border-border bg-card shadow-card">
             <CardContent className="space-y-3 p-7">
               <div className="flex items-center gap-3 text-sm">
-                <Phone className="h-4 w-4 text-accent" /> <span className="text-foreground">+91 99999 99999</span>
+                <Phone className="h-4 w-4 text-accent" /> <span className="text-foreground">+91 97571 90200</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <Mail className="h-4 w-4 text-accent" /> <span className="text-foreground">hello@mumbairealty.in</span>
               </div>
-              <p className="pt-2 text-xs text-muted-foreground">Office: Bandra-Kurla Complex, Mumbai — Mon to Sat, 10am–7pm</p>
+              <p className="pt-2 text-xs text-muted-foreground">Office: G-54 Saidham Shopping Plaza, P.K. Road, Mulund West, Mumbai — Mon to Sat, 10am–7pm</p>
             </CardContent>
           </Card>
         </div>
@@ -85,7 +85,7 @@ export function ContactSection() {
 export function WhatsappFab() {
   return (
     <a
-      href="https://wa.me/919999999999"
+      href="https://wa.me/919757190200"
       target="_blank"
       rel="noreferrer"
       aria-label="Chat on WhatsApp"

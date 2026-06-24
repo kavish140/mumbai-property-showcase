@@ -25,8 +25,10 @@ export function YouTubeSection() {
               <span><span className="font-semibold text-foreground">255+</span> <span className="text-muted-foreground">subscribers and growing</span></span>
             </div>
           </div>
-          <Button size="lg" className="bg-gradient-gold text-accent-foreground shadow-card hover:opacity-90">
-            <Youtube className="mr-2 h-5 w-5" /> Subscribe on YouTube
+          <Button asChild size="lg" className="bg-gradient-gold text-accent-foreground shadow-card hover:opacity-90">
+            <a href="https://youtube.com/@mumbairealestate9595" target="_blank" rel="noreferrer">
+              <Youtube className="mr-2 h-5 w-5" /> Subscribe on YouTube
+            </a>
           </Button>
         </div>
 
