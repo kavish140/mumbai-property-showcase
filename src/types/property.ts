@@ -13,6 +13,7 @@ export interface Property {
   areaSqft: number;
   description: string;
   imageUrl: string;
+  youtubeUrl?: string;
 }
 
 export function formatINR(value: number): string {

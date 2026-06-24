@@ -6,6 +6,12 @@ import type { Property } from "@/types/property";
 import { Bath, BedDouble, MapPin, Square, ArrowLeft } from "lucide-react";
 import { formatINR } from "@/types/property";
 
+function getYouTubeId(url: string) {
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  return match && match[2].length === 11 ? match[2] : null;
+}
+
 export const Route = createFileRoute("/properties/$id")({
   component: PropertyDetailPage,
 });
@@ -57,11 +63,23 @@ function PropertyDetailPage() {
 
         <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr]">
           <div>
-            <img
-              src={property.imageUrl}
-              alt={property.title}
-              className="w-full rounded-2xl object-cover aspect-[4/3] shadow-card"
-            />
+            {property.youtubeUrl ? (
+              <div className="w-full overflow-hidden rounded-2xl shadow-card aspect-video relative">
+                <iframe
+                  src={`https://www.youtube.com/embed/${getYouTubeId(property.youtubeUrl)}`}
+                  title={property.title}
+                  className="absolute inset-0 w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            ) : (
+              <img
+                src={property.imageUrl}
+                alt={property.title}
+                className="w-full rounded-2xl object-cover aspect-[4/3] shadow-card"
+              />
+            )}
           </div>
           <div>
             <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent">

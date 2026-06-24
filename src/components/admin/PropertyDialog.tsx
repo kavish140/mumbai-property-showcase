@@ -38,6 +38,7 @@ const empty: Omit<Property, "id"> = {
   areaSqft: 0,
   description: "",
   imageUrl: "",
+  youtubeUrl: "",
 };
 
 export function PropertyDialog({ open, onOpenChange, editing, onSave }: Props) {
@@ -171,6 +172,14 @@ export function PropertyDialog({ open, onOpenChange, editing, onSave }: Props) {
               value={form.imageUrl}
               onChange={(e) => update("imageUrl", e.target.value)}
               placeholder="https://images.unsplash.com/…"
+            />
+          </div>
+          <div className="sm:col-span-2">
+            <Label>YouTube Video URL (Optional)</Label>
+            <Input
+              value={form.youtubeUrl || ""}
+              onChange={(e) => update("youtubeUrl", e.target.value)}
+              placeholder="https://youtube.com/watch?v=..."
             />
           </div>
           <div className="sm:col-span-2">
