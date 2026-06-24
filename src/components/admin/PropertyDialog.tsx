@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/select";
 import type { Property, PropertyStatus, PropertyType } from "@/types/property";
 import { ImageUploadZone } from "@/components/admin/ImageUploadZone";
+import { MultiImageUploadZone } from "@/components/admin/MultiImageUploadZone";
 
 interface Props {
   open: boolean;
@@ -40,6 +41,7 @@ const empty: Omit<Property, "id"> = {
   description: "",
   imageUrl: "",
   youtubeUrl: "",
+  gallery: [],
 };
 
 export function PropertyDialog({ open, onOpenChange, editing, onSave }: Props) {
@@ -172,10 +174,17 @@ export function PropertyDialog({ open, onOpenChange, editing, onSave }: Props) {
             />
           </div>
           <div className="sm:col-span-2">
-            <Label>Property Photo</Label>
+            <Label>Cover Photo (Required)</Label>
             <ImageUploadZone
               value={form.imageUrl}
               onChange={(url) => update("imageUrl", url)}
+            />
+          </div>
+          <div className="sm:col-span-2">
+            <Label>Property Gallery (Optional)</Label>
+            <MultiImageUploadZone
+              value={form.gallery || []}
+              onChange={(urls) => update("gallery", urls)}
             />
           </div>
           <div className="sm:col-span-2">

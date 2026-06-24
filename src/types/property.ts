@@ -14,6 +14,7 @@ export interface Property {
   description: string;
   imageUrl: string;
   youtubeUrl?: string;
+  gallery?: string[];
 }
 
 export function formatINR(value: number): string {

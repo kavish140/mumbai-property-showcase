@@ -28,6 +28,19 @@ function PropertyDetailPage() {
     });
   }, [id]);
 
+  const [activeMedia, setActiveMedia] = useState<{ type: "video" | "image"; url: string } | null>(null);
+
+  // Set default active media when property loads
+  useEffect(() => {
+    if (property) {
+      if (property.youtubeUrl) {
+        setActiveMedia({ type: "video", url: property.youtubeUrl });
+      } else {
+        setActiveMedia({ type: "image", url: property.imageUrl });
+      }
+    }
+  }, [property]);
+
   if (loading) {
     return (
       <PublicLayout>
@@ -51,6 +64,8 @@ function PropertyDetailPage() {
     );
   }
 
+  const allImages = [property.imageUrl, ...(property.gallery || [])];
+
   return (
     <PublicLayout>
       <div className="container py-24">
@@ -62,11 +77,12 @@ function PropertyDetailPage() {
         </Link>
 
         <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr]">
-          <div>
-            {property.youtubeUrl ? (
+          <div className="space-y-4">
+            {/* Main Viewer */}
+            {activeMedia?.type === "video" ? (
               <div className="w-full overflow-hidden rounded-2xl shadow-card aspect-video relative">
                 <iframe
-                  src={`https://www.youtube.com/embed/${getYouTubeId(property.youtubeUrl)}`}
+                  src={`https://www.youtube.com/embed/${getYouTubeId(activeMedia.url)}`}
                   title={property.title}
                   className="absolute inset-0 w-full h-full border-0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -75,10 +91,46 @@ function PropertyDetailPage() {
               </div>
             ) : (
               <img
-                src={property.imageUrl}
+                src={activeMedia?.url || property.imageUrl}
                 alt={property.title}
                 className="w-full rounded-2xl object-cover aspect-[4/3] shadow-card"
               />
+            )}
+
+            {/* Thumbnail Strip */}
+            {(property.youtubeUrl || allImages.length > 1) && (
+              <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+                {property.youtubeUrl && (
+                  <button
+                    type="button"
+                    onClick={() => setActiveMedia({ type: "video", url: property.youtubeUrl! })}
+                    className={`relative shrink-0 overflow-hidden rounded-lg border-2 transition-all w-24 h-24 ${
+                      activeMedia?.type === "video" ? "border-primary" : "border-transparent opacity-60 hover:opacity-100"
+                    }`}
+                  >
+                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center text-white pl-1">
+                        <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4"><path d="M8 5v14l11-7z"/></svg>
+                      </div>
+                    </div>
+                    <img src={property.imageUrl} alt="Video thumbnail" className="w-full h-full object-cover" />
+                  </button>
+                )}
+                {allImages.map((imgUrl, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => setActiveMedia({ type: "image", url: imgUrl })}
+                    className={`shrink-0 overflow-hidden rounded-lg border-2 transition-all w-24 h-24 ${
+                      activeMedia?.type === "image" && activeMedia.url === imgUrl
+                        ? "border-primary"
+                        : "border-transparent opacity-60 hover:opacity-100"
+                    }`}
+                  >
+                    <img src={imgUrl} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-cover" />
+                  </button>
+                ))}
+              </div>
             )}
           </div>
           <div>
