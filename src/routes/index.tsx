@@ -1,13 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SiteHeader } from "@/components/site/SiteHeader";
+import { PublicLayout } from "@/components/site/PublicLayout";
 import { Hero } from "@/components/site/Hero";
 import { ServicesGrid } from "@/components/site/ServicesGrid";
 import { FeaturedProperties } from "@/components/site/FeaturedProperties";
 import { YouTubeSection } from "@/components/site/YouTubeSection";
 import { FounderProfile } from "@/components/site/FounderProfile";
-import { ContactSection, WhatsappFab } from "@/components/site/ContactSection";
-import { Footer } from "@/components/site/Footer";
-
+import { ContactSection } from "@/components/site/ContactSection";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -24,18 +22,13 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background">
-      <SiteHeader />
-      <main>
-        <Hero />
-        <ServicesGrid />
-        <FeaturedProperties />
-        <YouTubeSection />
-        <FounderProfile />
-        <ContactSection />
-      </main>
-      <Footer />
-      <WhatsappFab />
-    </div>
+    <PublicLayout>
+      <Hero />
+      <ServicesGrid />
+      <FeaturedProperties />
+      <YouTubeSection />
+      <FounderProfile />
+      <ContactSection />
+    </PublicLayout>
   );
 }

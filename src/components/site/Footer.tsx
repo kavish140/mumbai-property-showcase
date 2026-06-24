@@ -1,5 +1,5 @@
 import { Building2 } from "lucide-react";
-
+import { Link } from "@tanstack/react-router";
 export function Footer() {
   return (
     <footer className="border-t border-border bg-background">
@@ -18,10 +18,10 @@ export function Footer() {
         <div>
           <h4 className="font-display text-sm font-semibold">Explore</h4>
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-            <li><a href="#services" className="hover:text-foreground">Services</a></li>
-            <li><a href="#properties" className="hover:text-foreground">Properties</a></li>
+            <li><Link to="/services" className="hover:text-foreground">Services</Link></li>
+            <li><Link to="/properties" className="hover:text-foreground">Properties</Link></li>
             <li><a href="https://youtube.com/@mumbairealestate9595" target="_blank" rel="noreferrer" className="hover:text-foreground">YouTube</a></li>
-            <li><a href="#founder" className="hover:text-foreground">About</a></li>
+            <li><Link to="/about" className="hover:text-foreground">About</Link></li>
           </ul>
         </div>
         <div>

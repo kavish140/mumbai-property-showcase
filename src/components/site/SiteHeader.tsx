@@ -3,10 +3,10 @@ import { Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { href: "#services", label: "Services" },
-  { href: "#properties", label: "Properties" },
-  { href: "#youtube", label: "YouTube" },
-  { href: "#founder", label: "About" },
+  { to: "/services", label: "Services" },
+  { to: "/properties", label: "Properties" },
+  { href: "https://youtube.com/@mumbairealestate9595", label: "YouTube" },
+  { to: "/about", label: "About" },
 ];
 
 export function SiteHeader() {
@@ -24,9 +24,15 @@ export function SiteHeader() {
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground">
-              {l.label}
-            </a>
+            l.to ? (
+              <Link key={l.to} to={l.to} className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground">
+                {l.label}
+              </Link>
+            ) : (
+              <a key={l.href} href={l.href} target="_blank" rel="noreferrer" className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground">
+                {l.label}
+              </a>
+            )
           ))}
         </nav>
         <div className="flex items-center gap-2">
@@ -34,7 +40,7 @@ export function SiteHeader() {
             <Link to="/admin/properties">Admin</Link>
           </Button>
           <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
-            <a href="#contact">Get in Touch</a>
+            <Link to="/contact">Get in Touch</Link>
           </Button>
         </div>
       </div>
